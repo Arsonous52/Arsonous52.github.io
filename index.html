@@ -1,2 +1,51 @@
-<h1>Arsonous52 Github Page</h1>
-<body>Under construction, pardon my dust!</body>
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            function downloadFile(file) {
+                const a = document.createElement('a');
+                a.href = 'builds/'+ file + '.3dsx';
+                a.download = 'builds/'+ file + '.3dsx';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+            </script>
+    </head>
+
+    <body>
+
+        <div class="headerContainer">
+            <div class="header"><h1>Arsonous52's Portfolio</h1></div>
+            <div class="subHeader">Abandon All Hope Ye Who Enter Here... </div>
+        </div>
+
+        <div class="container" onclick="off()">
+
+            <h1>Games</h1>
+            <div class="grid">
+
+                <div class="panel" onclick="downloadFile('Flappy Bird')" style="cursor: pointer;">
+                    <img src="fb.png" draggable="false" style="width:1fr; float:left;">
+                    <div style="width:1fr; float:right;">Flappy Bird</div>
+                </div>
+
+                <div class="panel" onclick="downloadFile('A Link To The Cast')" style="cursor: pointer;">
+                        <img src="alttc.png" draggable="false" style="width:1fr; float:left;">
+                        <div style="width:1fr; float:right;">A Link to the Cast</div>
+                </div>
+                
+
+                <div class="panel" style="cursor: pointer;">
+                    <img src="wc.png" draggable="false" style="width:1fr; float:left;">
+                    <div style="width:1fr; float:right;">Wasting Crown</div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
