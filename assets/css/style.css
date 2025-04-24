@@ -23,6 +23,18 @@ div {
     overflow: hidden;
 }
 
+.error {
+    color: white;
+    background: hsla(0, 100%, 50%, 0.5);
+    border-style:solid;
+    border-color: white;
+    border-radius: 1rem;
+    width:fit-content;
+    position:absolute;
+    bottom: 10px;
+    padding: 5%;
+}
+
 .headerContainer {
     background-color:black;
     width: fit-content;
@@ -30,16 +42,7 @@ div {
     margin:auto;
     border-radius: 2rem;
     border-style:solid;
-}
-
-.header {
     text-align:center;
-    color:plum;
-}
-
-.subHeader {
-    text-align:center;
-    height: auto;
 }
 
 .container {
@@ -51,9 +54,9 @@ div {
     padding: 10px;
 }
 
-.container > h1 {
-    text-align: center;
-}
+    .container > h1 {
+        text-align: center;
+    }
 
 .grid {
     display:grid;
@@ -61,22 +64,24 @@ div {
 }
 
 .panel {
+    cursor:pointer;
     background-color: white;
     position: relative;
     color:black;
     width:75%;
     margin:10px auto;
     border-radius: 1rem;
+    border-style:solid;
     user-select: none;
 }
 
-.panel > p {
-    position:absolute;
-    z-index: 1;
-    bottom:0;
-    padding: 2.5%;
-    font-size: 1.25rem;
-}
+    .panel > p {
+        position:absolute;
+        z-index: 1;
+        bottom:0;
+        padding: 2.5%;
+        font-size: 1.25rem;
+    }
 
 .button {
     width: 10%;
