@@ -8,7 +8,7 @@
             function downloadFile(file) {
                 const a = document.createElement('a');
                 a.href = 'builds/'+ file + '.3dsx';
-                a.download = 'builds/'+ file + '.3dsx';
+                a.download = file + '.3dsx';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -39,9 +39,12 @@
                 </div>
                 
 
-                <div class="panel" style="cursor: pointer;">
+                <div class="panel">
                     <img src="wc.png" draggable="false" style="width:1fr; float:left;">
-                    <div style="width:1fr; float:right;">Wasting Crown</div>
+                    <div style="width:1fr; float:right;">
+                        Wasting Crown
+                        <p style="color:darkgray;">(Work in Progress)</p>
+                    </div>
                 </div>
             </div>
 
