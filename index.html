@@ -1,50 +1,39 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
-
-        <script>
-            function downloadFile(file) {
-                const a = document.createElement('a');
-                a.href = 'builds/'+ file + '.3dsx';
-                a.download = file + '.3dsx';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            }
-            </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/main.js"></script>
     </head>
 
     <body>
 
         <div class="headerContainer">
             <div class="header"><h1>Arsonous52's Portfolio</h1></div>
-            <div class="subHeader">Abandon All Hope Ye Who Enter Here... </div>
+            <div class="subHeader"><p>Abandon All Hope Ye Who Enter Here... </p></div>
         </div>
 
-        <div class="container" onclick="off()">
+        <div class="container">
 
-            <h1>Games</h1>
+            <h1>3DS Games</h1>
             <div class="grid">
 
                 <div class="panel" onclick="downloadFile('Flappy Bird')" style="cursor: pointer;">
-                    <img src="fb.png" draggable="false" style="width:1fr; float:left;">
-                    <div style="width:1fr; float:right;">Flappy Bird</div>
+                    <img src="fb.png" draggable="false" style="width:100%;">
+                    <div class="gradOverlay"></div>
+                    <p style="color: white;">Flappy Bird Port</p>
                 </div>
 
                 <div class="panel" onclick="downloadFile('A Link To The Cast')" style="cursor: pointer;">
-                        <img src="alttc.png" draggable="false" style="width:1fr; float:left;">
-                        <div style="width:1fr; float:right;">A Link to the Cast</div>
+                    <img src="alttc.png" draggable="false" style="width:100%;">
+                    <div class="gradOverlay"></div>
+                    <p style="color: white;">A Link to the Cast</p>
                 </div>
                 
-
                 <div class="panel">
-                    <img src="wc.png" draggable="false" style="width:1fr; float:left;">
-                    <div style="width:1fr; float:right;">
-                        Wasting Crown
-                        <p style="color:darkgray;">(Work in Progress)</p>
-                    </div>
+                    <img src="wc.png" draggable="false" style="width:100%">
+                    <div class="gradOverlay"></div>
+                    <p style="color:darkgray;"">(In Development)</p>
                 </div>
             </div>
 

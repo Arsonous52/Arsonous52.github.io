@@ -1,0 +1,112 @@
+html {
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.5rem);
+    font-family: 'Press Start 2P', monospace;
+}
+
+body {
+    background-image: url('../../bg.jpg');
+    background-size: cover;
+    color:grey;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+div {
+    border-style:none;
+    border-color: white;
+    overflow: hidden;
+}
+
+.headerContainer {
+    background-color:black;
+    width: fit-content;
+    padding: 0.5% 5%;
+    margin:auto;
+    border-radius: 2rem;
+    border-style:solid;
+}
+
+.header {
+    text-align:center;
+    color:plum;
+}
+
+.subHeader {
+    text-align:center;
+    height: auto;
+}
+
+.container {
+    background-color:black;
+    margin:1rem auto;
+    width:80%;
+    border-radius: 1rem;
+    border-style:solid;
+    padding: 10px;
+}
+
+.container > h1 {
+    text-align: center;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);;
+}
+
+.panel {
+    background-color: white;
+    position: relative;
+    color:black;
+    width:75%;
+    margin:10px auto;
+    border-radius: 1rem;
+    user-select: none;
+}
+
+.panel > p {
+    position:absolute;
+    z-index: 1;
+    bottom:0;
+    padding: 2.5%;
+    font-size: 1.25rem;
+}
+
+.button {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+}
+
+.gradOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, black, transparent);
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
