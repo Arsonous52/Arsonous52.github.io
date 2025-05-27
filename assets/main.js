@@ -20,7 +20,7 @@ async function checkLink(link) {
 
 async function downloadFile(file) {
 
-    const link = 'assets/builds/' + file + '.3dsx';
+    const link = 'assets/builds/' + file;
     const exists = await checkLink(link);
 
     if (exists) {

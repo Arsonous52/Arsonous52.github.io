@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/style.css">
         <script src="assets/main.js"></script>
     </head>
 
@@ -14,23 +14,47 @@
         </div>
 
         <div class="container">
+            <h1>About Me</h1>
+
+            <div class="portrait">
+                <picture>
+                    <source srcset="self-mini.png" media="(max-width: 480px)">
+                    <img src="self.png" style="margin:auto">
+                </picture>
+            </div>
+
+            <p>
+            Hi, I'm Alexander/Arsonous52!, I'm a passionate game developer with a love for programming and everything 3DS. I specialize in designing and building gameplay
+            systems that feel fluid and natural to navigate, whether it's fine-tuning turn-based combat, high-octane movement, or simple recreations of the classics.
+            <br><br>
+            With a background in programming and art, I approach development as both a technical challenge and a form of artistic expression. I'm especially interested in learning the
+            balance between player agency and narrative structure, and I strive to make every interaction meaningful, whether you're fighting for your life or engaging in witty banter.
+            <br><br>
+            I'm currently working on Wasting Crown, a dark fantasy RPG for the 3DS inspired by titles such as Undertale, Miitopia, Final Fantasy and Darkest Dungeon, which aims to be my
+            first full project, I have high hopes for it!
+            <br><br>
+            This site showcases my ongoing work, personal projects, and experiments-feel free to explore!
+            </p>
+        </div>
+
+        <div class="container">
 
             <h1>3DS Games</h1>
             <div class="grid">
 
-                <div class="panel" onclick="downloadFile('Flappy Bird')">
+                <div class="panel" onclick="goToPage('flappy')">
                     <img src="preview_Flappy.png" draggable="false" style="width:100%;">
                     <div class="gradOverlay"></div>
                     <p style="color: white;">Flappy Bird Port</p>
                 </div>
                 
-                <div class="panel" onclick="downloadFile('Pong')">
+                <div class="panel" onclick="goToPage('pong')">
                     <img src="preview_Pong.png" draggable="false" style="width:100%">
                     <div class="gradOverlay"></div>
                     <p style="color:white;"">Pong</p>
                 </div>
 
-                <div class="panel" onclick="downloadFile('A Link To The Cast')">
+                <div class="panel" onclick="goToPage('cast')">
                     <img src="preview_Cast.png" draggable="false" style="width:100%;">
                     <div class="gradOverlay"></div>
                     <p style="color: white;">A Link to the Cast</p>

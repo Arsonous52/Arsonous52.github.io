@@ -4,12 +4,13 @@ html {
 }
 
 body {
-    background-image: url('../../bg.jpg');
-    background-size: cover;
-    color:grey;
+    background-image: url('../../background.jpg');
+    background-size:auto;
+    color:lightgray;
 }
 
 h1 {
+    color: grey;
     margin: 0;
 }
 
@@ -58,9 +59,14 @@ div {
         text-align: center;
     }
 
+.portrait {
+    float:right;
+}
+    
+
 .grid {
     display:grid;
-    grid-template-columns: repeat(4, 1fr);;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .panel {
@@ -113,5 +119,10 @@ div {
 @media (max-width: 480px) {
     .grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .portrait {
+        float: none;
+        margin:auto;
+        width:fit-content;
     }
 }
