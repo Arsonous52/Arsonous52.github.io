@@ -26,7 +26,7 @@ async function downloadFile(file) {
     if (exists) {
         const a = document.createElement('a');
         a.href = link;
-        a.download = file + '.3dsx';
+        a.download = file;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
