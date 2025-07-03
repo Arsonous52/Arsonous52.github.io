@@ -1,73 +1,115 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>Arsonous52's Portfolio</title>
         <link rel="stylesheet" href="assets/style.css">
+        
         <script src="assets/main.js"></script>
+        <script>
+            window.onload = () => {
+                const savedTab = sessionStorage.getItem("main") || "aboutMe";
+                const tabButton = Array.from(document.getElementsByClassName("tablinks"))
+                .find(btn => btn.getAttribute("onclick").includes(savedTab));
+                if (tabButton) {
+                tabButton.click();
+                }
+            };
+        </script>
     </head>
 
     <body>
 
-        <div class="headerContainer">
-            <h1 style="color:plum;">Arsonous52's Portfolio</h1>
-            <p>Abandon All Hope Ye Who Enter Here... </p>
-        </div>
+        <main>
 
-        <div class="container">
-            <h1>About Me</h1>
-
-            <div class="portrait">
-                <picture>
-                    <source srcset="self-mini.png" media="(max-width: 480px)">
-                    <img src="self.png" style="margin:auto">
-                </picture>
+            <div class="headerContainer">
+                <h1>Arsonous52's Portfolio</h1>
             </div>
 
-            <p>
-            Hi, I'm Alexander/Arsonous52!, I'm a passionate game developer with a love for programming and everything 3DS. I specialize in designing and building gameplay
-            systems that feel fluid and natural to navigate, whether it's fine-tuning turn-based combat, high-octane movement, or simple recreations of the classics.
-            <br><br>
-            With a background in programming and art, I approach development as both a technical challenge and a form of artistic expression. I'm especially interested in learning the
-            balance between player agency and narrative structure, and I strive to make every interaction meaningful, whether you're fighting for your life or engaging in witty banter.
-            <br><br>
-            I'm currently working on Wasting Crown, a dark fantasy RPG for the 3DS inspired by titles such as Undertale, Miitopia, Final Fantasy and Darkest Dungeon, which aims to be my
-            first full project, I have high hopes for it!
-            <br><br>
-            This site showcases my ongoing work, personal projects, and experiments-feel free to explore!
-            </p>
-        </div>
+            <div class="tab">
+                <button id="defaultTab" class="tablinks" onclick="switchTab('aboutMe', 'main')">About Me</button>
+                <button class="tablinks" onclick="switchTab('3dsGames', 'main')">3DS Games</button>
+            </div>
+            
+            <div class="container">
 
-        <div class="container">
+                <div id="aboutMe" class="tabcontent">
+                    <h1>About Me</h1>
 
-            <h1>3DS Games</h1>
-            <div class="grid">
+                    <div class="portrait">
+                        <picture>
+                            <source srcset="assets/images/self-mini.png" media="(max-width: 480px)">
+                            <img src="assets/images/self.png" style="margin:auto">
+                        </picture>
+                    </div>
 
-                <div class="panel" onclick="goToPage('flappy')">
-                    <img src="preview_Flappy.png" draggable="false" style="width:100%;">
-                    <div class="gradOverlay"></div>
-                    <p style="color: white;">Flappy Bird Port</p>
-                </div>
-                
-                <div class="panel" onclick="goToPage('pong')">
-                    <img src="preview_Pong.png" draggable="false" style="width:100%">
-                    <div class="gradOverlay"></div>
-                    <p style="color:white;"">Pong</p>
+                    <p>
+                    Hi, I'm Alexander/Arsonous52!, I'm a passionate game developer with a love for programming and everything 3DS. I specialize in designing and building gameplay
+                    systems that feel fluid and natural to navigate, whether it's fine-tuning turn-based combat, high-octane movement, or simple recreations of the classics.
+                    <br><br>
+                    With a background in programming and art, I approach development as both a technical challenge and a form of artistic expression. I'm especially interested in learning the
+                    balance between player agency and narrative structure, and I strive to make every interaction meaningful, whether you're fighting for your life or engaging in witty banter.
+                    <br><br>
+                    I'm currently working on Wasting Crown, a dark fantasy RPG for the 3DS inspired by titles such as Undertale, Miitopia, Final Fantasy and Darkest Dungeon, which aims to be my
+                    first full project, I have high hopes for it!
+                    <br><br>
+                    This site showcases my ongoing work, personal projects, and experiments.
+                    </p>
                 </div>
 
-                <div class="panel" onclick="goToPage('cast')">
-                    <img src="preview_Cast.png" draggable="false" style="width:100%;">
-                    <div class="gradOverlay"></div>
-                    <p style="color: white;">A Link to the Cast</p>
+                <div id="3dsGames" class="tabcontent">
+
+                    <h1>3DS Games</h1>
+                    <div class="grid">
+
+                        <a href="flappy.html" class="panel">
+                            <img src="assets/images/previews/Flappy.png" draggable="false" style="width:100%;">
+                            <div class="gradOverlay"></div>
+                            <p style="color: white;">Flappy Bird</p>
+                        </a>
+                        
+                        <a href="pong.html" class="panel">
+                            <img src="assets/images/previews/Pong.png" draggable="false" style="width:100%">
+                            <div class="gradOverlay"></div>
+                            <p style="color:white;">Pong</p>
+                        </a>
+
+                        <a href="cast.html" class="panel">
+                            <img src="assets/images/previews/Cast.png" draggable="false" style="width:100%;">
+                            <div class="gradOverlay"></div>
+                            <p style="color: white;">A Link to the Cast</p>
+                        </a>
+                        
+                        <div class="panel">
+                            <img src="assets/images/previews/Dev.png" draggable="false" style="width:100%">
+                            <div class="gradOverlay"></div>
+                            <p style="color:darkgray;">In Development</p>
+                        </div>
+                    </div>
+
                 </div>
-                
-                <div class="panel" style="cursor:auto">
-                    <img src="preview_dev.png" draggable="false" style="width:100%">
-                    <div class="gradOverlay"></div>
-                    <p style="color:darkgray;"">(In Development)</p>
+
+                <div id="unityGames" class="tabcontent">
+
+                    <h1>Unity Games</h1>
+                    <div class="grid">
+
+                        This isn't ready yet!
+
+                    </div>
+                    
                 </div>
+
             </div>
 
-        </div>
+        </main>
+
+        <footer>
+        2025 Arsonous52 |
+        Contact: <a href="mailto:arsonousknight52@gmail.com" target="_blank">arsonousknight52@gmail.com</a> |
+        <a href="https://github.com/Arsonous52" target="_blank">Github</a>
+        </footer>
 
     </body>
+
 </html>

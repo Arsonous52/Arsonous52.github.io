@@ -2,29 +2,92 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flappy Bird</title>
         <link rel="stylesheet" href="assets/style.css">
+        
         <script src="assets/main.js"></script>
+        <script>
+            window.onload = () => {
+                let button = document.getElementById("defaultTab").click();
+                showSlide(1);
+            };
+        </script>
     </head>
 
     <body>
 
-        <div class="headerContainer">
-            <h1 style="color:plum;">Flappy Bird</h1>
-        </div>
+        <main>
 
-        <div class="container" onclick="goToPage('index')" style="color:red; cursor:pointer;  user-select: none;">
-            Go Back!
-        </div>
+            <a href="index.html" class="back">
+                <img src="assets/images/back.svg" style="width:100%; height: 100%; filter: invert(100%) brightness(100%);">
+            </a>
 
-        <div class="container">
-            <img src="preview_Flappy.png" style="float: right;">
-            A faithful homebrew recreation of the classic Flappy Bird, built specifically for the Nintendo 3DS. This port captures the original game's addictive tap-to-fly gameplay on
-            the 3DS. Developed from the ground up, it runs smoothly on real hardware and is designed to feel native to the system. Simple, responsive, and fun-just like you remember it.
-        </div>
+            <div class="headerContainer">
+                <h1>Flappy Bird</h1>
+            </div>
 
-        <div class="container" onclick="downloadFile('Flappy Bird.3dsx')" style="color:green; cursor:pointer;  user-select: none;">
-            Download .3dsx
-        </div>
+            <div class="tab">
+                <button id="defaultTab" class="tablinks" onclick="switchTab('overview')">Overview</button>
+                <button class="tablinks" onclick="switchTab('screenshots')">Screenshots</button>
+            </div>
+
+            <div class="thinContainer">
+
+                <img src="assets/images/banners/Flappy.png" class="banner">
+
+                <div id="overview" class="tabcontent">
+                    <h3 style="text-align:center;">Overview</h3>
+                    <p>
+                        A faithful homebrew recreation of the classic Flappy Bird, built for the Nintendo 3DS. This port captures the original game's 
+                        addictive gameplay on the 3DS. Developed from the ground up, it runs smoothly on hardware and is designed to feel native to
+                        the system. Simple, responsive, fun, and maybe just a little anger inducing.
+                    </p> <br>
+
+                    <img src="assets/images/controls/Flappy Controls.png" style="width: 50%; min-width: 300px; display: block; margin: 0 auto;">
+                </div>
+
+                <div id="screenshots" class="tabcontent">
+                    <h3 style="text-align:center;">Screenshots</h3>
+
+                    <div class="carousel">
+
+                        <div class="slide">
+                            <div class="slideNum">1 / 3</div>
+                            <img src="assets/images/screenshots/flappy1.png" style="width:100%">
+                        </div>
+
+                        <div class="slide">
+                            <div class="slideNum">2 / 3</div>
+                            <img src="assets/images/screenshots/flappy2.png" style="width:100%">
+                        </div>
+
+                        <div class="slide">
+                            <div class="slideNum">3 / 3</div>
+                            <img src="assets/images/screenshots/flappy3.png" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="incrementSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="incrementSlide(1)">&#10095;</a>
+                    </div>
+                </div>
+
+                <div id="play" class="tabcontent">
+                    <h3 style="text-align:center;">Play Now</h3>
+                </div>
+                
+                <a href="assets/builds/Flappy Bird.3dsx" class="downloadButton">
+                    Download .3dsx
+                </a>
+
+            </div>
+
+        </main>
+
+        <footer>
+        2025 Arsonous52 |
+        Contact: <a href="mailto:arsonousknight52@gmail.com" target="_blank">arsonousknight52@gmail.com</a> |
+        <a href="https://github.com/Arsonous52" target="_blank">Github</a>
+        </footer>
 
     </body>
 
