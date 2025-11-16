@@ -1,4 +1,4 @@
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router';
 
 import Home from './pages/home';
 import About from './pages/about';
@@ -11,7 +11,7 @@ import NDSPage from './pages/projects/3dspage';
 
 import Other from './pages/other';
 import OtherPage from './pages/projects/otherpage';
-
+/*
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -27,10 +27,24 @@ const router = createBrowserRouter(
       <Route path='*' element={<FOF/>}/>
     </>
   )
-)
+)*/
 
-export default function App({routes}) {
+export default function App() {
   return (
-    <RouterProvider router={router}/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='*' element={<FOF/>}/>
+        
+        <Route path='/unity' element={<Unity/>}/>
+        <Route path='/3ds' element={<NDS/>}/>
+        <Route path='/other' element={<Other/>}/>
+        
+        <Route path='/unity/:id' element={<UnityPage/>}/>
+        <Route path='/3ds/:id' element={<NDSPage/>}/>
+        <Route path='/other/:id' element={<OtherPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
