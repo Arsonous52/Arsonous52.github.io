@@ -1,0 +1,27 @@
+{
+  "name": "arsonous52.github.io",
+  "version": "1.0.0",
+  "description": "This is a portfolio ive put together which displays my noteworthy projects, and also serves as a learning experience for me to learn web design.",
+  "main": "eslint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arsonous52/Arsonous52.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arsonous52/Arsonous52.github.io/issues"
+  },
+  "homepage": "https://github.com/Arsonous52/Arsonous52.github.io",
+  "dependencies": {
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
