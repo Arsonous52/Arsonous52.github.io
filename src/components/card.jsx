@@ -10,7 +10,7 @@ export default function Card({game}) {
   return (
     <Button className="card" onClick={() => handleClick(game.id)}>
       <img src={game.thumbnail} style={{width:"100%"}}/>
-      <p>{game.title}</p>
+      <h4>{game.title}</h4>
     </Button>
     );
 }

@@ -10,7 +10,8 @@ export default function ListCard({project}) {
   return (
     <Button className="listCard" onClick={() => handleClick(project.id)}>
       <img src={project.thumbnail} style={{height:"100%", float:"left"}}/>
-      <p>{project.title}</p>
+      <h4>{project.title}</h4>
+      <p>{project.tagline}</p>
     </Button>
     );
 }

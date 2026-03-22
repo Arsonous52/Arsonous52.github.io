@@ -5,8 +5,8 @@ export default function() {
   return(
     <>
       <Header/>
-      <div className='center'>
-        <h1>404, Page not found!</h1>
+      <div id='content' style={{alignContent:'center'}}>
+        <h1 style={{textAlign:'center'}}>Error 404: Page not found!</h1>
       </div>
       <Footer/>
     </>

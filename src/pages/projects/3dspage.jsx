@@ -4,6 +4,7 @@ import Button from '../../components/button';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import {Direct, Itch} from '../../components/download';
+import Carousel from '../../components/carousel';
 
 import games from '../../data/3dsgames'
 
@@ -15,9 +16,11 @@ export default function() {
   if (!game) return( 
     <>
       <Header/>
-      <div className='container'>
-        <Button onClick={() => navigate(-1)}>←Back</Button>
-        <h1>Game "{id}" not found.</h1>
+      <div id='content'>
+        <div className='container'>
+          <Button onClick={() => navigate(-1)}>←Back</Button>
+          <h1>Game "{id}" not found.</h1>
+        </div>
       </div>
       <Footer/>
     </>
@@ -29,20 +32,22 @@ export default function() {
   return(
     <>
       <Header/>
+      <div id='content'>
+        <div className='container'>
 
-      <div className='container'>
+          <Button onClick={() => navigate(-1)}>←Back</Button>
+          <h1>{game.title}</h1>
+          <p>{game.description}</p>
 
-        <Button onClick={() => navigate(-1)}>←Back</Button>
-        <h1>{game.title}</h1>
-        <p>{game.description}</p>
-        
-        <div>
-          {itch}
-          {direct}
+          <div>
+            {itch}
+            {direct}
+          </div>
+
+          <Carousel images={game.screenshots}/>
         </div>
-        
-      </div>
 
+      </div>
       <Footer/>
     </>
   )

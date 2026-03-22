@@ -11,12 +11,17 @@ export default function() {
   return(
     <>
       <Header/>
-      <h1>Other Projects</h1>
+      <div id='content' style={{textAlign:'center'}}>
 
-      <div className='listContainer'>
-        {list}
+        <div className='container'>
+          <h1>Other Projects</h1>
+        </div>
+
+        <div className='cardContainer'>
+          {list}
+        </div>
+
       </div>
-
       <Footer/>
     </>
   )

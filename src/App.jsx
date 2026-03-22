@@ -11,31 +11,14 @@ import NDSPage from './pages/projects/3dspage';
 
 import Other from './pages/other';
 import OtherPage from './pages/projects/otherpage';
-/*
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route index element={<Home/>}/>
-      <Route path='about' element={<About/>}/>
-      <Route path='unity' element={<Unity/>}/>
-      <Route path='unity/:id' element={<UnityPage/>}/>
-      <Route path='3ds' element={<NDS/>}/>
-      <Route path='3ds/:id' element={<NDSPage/>}/>
-      <Route path='other' element={<Other/>}/>
-      <Route path='other/:id' element={<OtherPage/>}/>
-
-      <Route path='*' element={<FOF/>}/>
-    </>
-  )
-)*/
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='*' element={<FOF/>}/>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='*' element={<FOF/>}/>
         
         <Route path='/unity' element={<Unity/>}/>
         <Route path='/3ds' element={<NDS/>}/>

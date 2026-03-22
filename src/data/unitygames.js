@@ -1,4 +1,4 @@
-const games  = [
+export default [
     {
         id: "last-high",
         title: "Last High",
@@ -16,8 +16,7 @@ const games  = [
         description: `This game was made by me and a friend as preperation for a game jam. The rule we rolled was "You don't play as the main character." This caused us
                         to have to think outside of the box before landing on the idea of playing as a friendly spirit in a dungeon guiding a blind hero to the princess.
                         I am very happy with how the visuals for this game turned out.`,
-                        
+
         itch: "https://arsonous52.itch.io/blind-faith",
     },
 ]
-export default games

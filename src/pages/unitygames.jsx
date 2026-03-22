@@ -11,12 +11,14 @@ export default function() {
   return(
     <>
       <Header/>
-      <h1>Unity Games</h1>
+      <div id='content' style={{textAlign:'center'}}>
+        <h1>Unity Games</h1>
 
-      <div className='cardContainer'>
-        {cards}
+        <div className='cardContainer'>
+          {cards}
+        </div>
+
       </div>
-
       <Footer/>
     </>
   )

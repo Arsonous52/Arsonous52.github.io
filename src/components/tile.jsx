@@ -13,8 +13,8 @@ export default function Tile({game, type}) {
 
   return (
     <Button className="tile" onClick={() => handleClick(game.id)}>
-      <img src={game.thumbnail}/>
-      <p>{game.title}</p>
+      <img src={game.thumbnail} style={{width: "100%"}}/>
+      <p>{game.Title}</p>
     </Button>
   );
 }
